@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<list>
 #include <iostream>
+#include<string>
 using namespace std;
 
 int main() {
@@ -18,7 +19,7 @@ int main() {
 	}
 	//西日暮里を追加
 	for (list<const char*>::iterator itr = stations.begin(); itr != stations.end(); ++itr) {
-		if (*itr == "Nippori") {
+		if (strcmp(*itr,"Nippori") == 0) {
 			itr = stations.insert(itr, "Nishi-Nippori");
 			++itr;
 		}
@@ -30,7 +31,7 @@ int main() {
 	}
 	//高輪ゲートウェイを追加
 	for (list<const char*>::iterator itr = stations.begin(); itr != stations.end(); ++itr) {
-		if (*itr == "Tamachi") {
+		if (strcmp(*itr, "Shinagawa") == 0) {
 			itr = stations.insert(itr, "Takanawa Gateway");
 			++itr;
 		}
